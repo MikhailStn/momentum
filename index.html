@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body class="body">
+  <div class="custom-player visible">
+    <div class="controls">
+      <div class="audio-name-wrapper">
+        <h2 class="audio-name"></h2>
+        <button class="close-player"></button>
+      </div>
+      <div class="progress-wrapper">
+        <input type="range" class="progress" min="0" max="100" step="0.01" value="0" style="background: linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) 0%, rgb(200, 200, 200) 0%, rgb(200, 200, 200) 100%);">
+      </div>
+      <div class="buttons-wrapper">
+        <button class="volume-button sound"></button>
+        <input type="range" class="volume" min="0" max="1" step="0.05" value="1" style="background: linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) 100%, rgb(200, 200, 200) 100%, rgb(200, 200, 200) 100%);">
+        <span class="audio-time"></span>
+      </div>
+    </div>
+  </div>
+  <div class="settings-wrapper">
+    <h3 class="settings-title" data-i18="settings">Настройки</h3>
+    <div class="setting-wrapper">
+      <h4 class="setting-title" data-i18="language">Язык</h4>
+      <button class="settings-btn ru active">Rus</button>
+      <button class="settings-btn en">Eng</button>
+    </div>
+    <div class="setting-wrapper">
+      <h4 class="setting-title" data-i18="back">Фон</h4>
+      <button class="settings-btn bg active">GitHub</button>
+      <button class="settings-btn bg">Unsplash</button>
+      <button class="settings-btn bg">Flickr</button>
+    </div>
+    <div class="setting-wrapper">
+      <h4 class="setting-title" data-i18="tags">Теги изображений</h4>
+      <input class="tags-input" placeholder="Введите тег" disabled>
+    </div>
+    <div class="setting-wrapper">
+      <h4 class="setting-title" data-i18="blocks">Скрыть блок</h4>
+      <button class="settings-btn shown" data-i18="time">Время</button>
+      <button class="settings-btn shown" data-i18="date">Дата</button>
+      <button class="settings-btn shown" data-i18="greet">Приветствие</button>
+      <button class="settings-btn shown" data-i18="quotes">Цитаты</button>
+      <button class="settings-btn shown" data-i18="weather">Погода</button>
+      <button class="settings-btn shown" data-i18="player">Плеер</button>
+      <button class="settings-btn shown" data-i18="toDo">Список дел</button>
+    </div>
+  </div>
+  <div class="toDo-wrapper">
+    <h2 class="toDo-title" data-i18="todo-title">Список дел</h2>
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <input class="toDo-item" type="text" placeholder="Добавить задачу">
+    <button class="toDo-btn" data-i18="clear-button">Очистить все</button>
+  </div>
+  <header class="header">
+    <div class="player visible">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather visible">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time visible"></time>
+    <date class="date visible"></date>
+    <div class="greeting-container visible">
+      <span class="greeting"></span>
+      <input type="text" class="name visible" placeholder="[Введите имя]"/>
+    </div>
+  </main>
+  <footer class="footer visible">
+    <div class="quote-wrapper visible">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <button class="toDo-button"></button>
+    <button class="settings-button"></button>
+  </footer>
+  <script src="./scripts.js"></script>
+</body>
+</html>
